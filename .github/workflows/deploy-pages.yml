@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: pnpm build:pages
         env:
-          SITE_URL: https://boredenough.github.io/personal-site
+          SITE_URL: https://guthu.in
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
