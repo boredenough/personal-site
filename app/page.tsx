@@ -41,12 +41,12 @@ const experience = [
 ];
 
 const projects = [
-  { year: "2024", name: "Trikona Design Studio", category: "Website", meta: "Figma · Framer" },
+  { year: "2024", name: "Trikona Design Studio", category: "Website", meta: "Figma · Framer", href: "https://www.trikonadesignstudio.com/" },
 ];
 
 const credentials = [
-  { issuer: "NISM", name: "Mutual Fund Distributor", series: "Series V-A" },
-  { issuer: "NISM", name: "Equity Derivatives", series: "Series VIII" },
+  { issuer: "NISM", name: "Mutual Fund Distributor", series: "Series V-A", validUntil: "Valid until 2028" },
+  { issuer: "NISM", name: "Equity Derivatives", series: "Series VIII", validUntil: "Valid until 2027" },
 ];
 
 export default function Home() {
@@ -61,6 +61,10 @@ export default function Home() {
           <h1 id="hero-title">Pranav Shetty</h1>
           <p>Limitless</p>
           <p>Bengaluru, India</p>
+          <div className="hero-social-links" aria-label="Social links">
+            <a href="https://x.com/b0redenough" target="_blank" rel="noreferrer">X ↗</a>
+            <a href="https://github.com/boredenough" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
         </section>
 
         <section aria-labelledby="current-title">
@@ -109,7 +113,7 @@ export default function Home() {
             {projects.map((project) => (
               <div className="data-row" key={project.name}>
                 <span className="muted tabular">{project.year}</span>
-                <strong>{project.name}</strong>
+                <strong><a href={project.href} target="_blank" rel="noreferrer">{project.name} ↗</a></strong>
                 <span>{project.category}</span>
                 <span className="muted">{project.meta}</span>
               </div>
@@ -120,7 +124,7 @@ export default function Home() {
         <section id="credentials" aria-labelledby="credentials-title">
           <div className="section-heading">
             <h2 id="credentials-title">Credentials</h2>
-            <span>Pending verification</span>
+            <span>NISM certifications</span>
           </div>
           <div className="data-list">
             {credentials.map((credential) => (
@@ -128,7 +132,7 @@ export default function Home() {
                 <span className="muted">{credential.issuer}</span>
                 <strong>{credential.name}</strong>
                 <span>{credential.series}</span>
-                <span className="muted">Verify</span>
+                <span className="muted">{credential.validUntil}</span>
               </div>
             ))}
           </div>
