@@ -4,21 +4,23 @@ import "./globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const siteUrl = process.env.SITE_URL ?? "http://localhost:3000";
+const socialImageUrl = `${siteUrl.replace(/\/$/, "")}/og.png`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: "Pranav Shetty",
   description: "Pranav Shetty — Limitless. Bengaluru, India.",
   openGraph: {
     title: "Pranav Shetty",
     description: "Limitless. Bengaluru, India.",
-    images: [{ url: "/og.png", width: 1536, height: 804, alt: "Pranav Shetty — Limitless. Bengaluru, India." }],
+    images: [{ url: socialImageUrl, width: 1536, height: 804, alt: "Pranav Shetty — Limitless. Bengaluru, India." }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pranav Shetty",
     description: "Limitless. Bengaluru, India.",
-    images: ["/og.png"],
+    images: [socialImageUrl],
   },
 };
 
