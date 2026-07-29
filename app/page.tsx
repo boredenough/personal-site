@@ -121,10 +121,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="credentials" aria-labelledby="credentials-title">
+        <section id="certificates" aria-labelledby="certificates-title">
           <div className="section-heading">
-            <h2 id="credentials-title">Credentials</h2>
-            <span>NISM certifications</span>
+            <h2 id="certificates-title">Certificates</h2>
           </div>
           <div className="data-list">
             {credentials.map((credential) => (
@@ -139,14 +138,13 @@ export default function Home() {
         </section>
 
         <section id="contact" className="contact" aria-labelledby="contact-title">
-          <h2 id="contact-title">Contact</h2>
-          <div>
-            <a className="email" href="mailto:pranavworkrelated@gmail.com">Email ↗</a>
-            <div className="social-links">
-              <a href="https://x.com/b0redenough" target="_blank" rel="noreferrer">X ↗</a>
-              <a href="https://github.com/boredenough" target="_blank" rel="noreferrer">GitHub ↗</a>
-            </div>
+          <div className="section-heading">
+            <h2 id="contact-title">Contact</h2>
           </div>
+          <a className="contact-row" href="mailto:pranavworkrelated@gmail.com">
+            <span>Email</span>
+            <span aria-hidden="true">↗</span>
+          </a>
         </section>
       </main>
 
