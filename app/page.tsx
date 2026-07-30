@@ -41,6 +41,7 @@ const experience = [
 ];
 
 const projects = [
+  { year: "2026", name: "codename:orbit", category: "Web app", meta: "Next.js", href: "https://boredenough.github.io/orbit/" },
   { year: "2024", name: "Trikona Design Studio", category: "Website", meta: "Figma · Framer", href: "https://www.trikonadesignstudio.com/" },
 ];
 
