@@ -49,6 +49,61 @@ const credentials = [
   { issuer: "NISM", name: "Equity Derivatives", series: "Series VIII", validUntil: "Valid until 2027" },
 ];
 
+const toolGroups = [
+  {
+    name: "Design",
+    items: [
+      { name: "Figma", icon: "https://cdn.simpleicons.org/figma/8c908d" },
+      { name: "Framer", icon: "https://cdn.simpleicons.org/framer/8c908d" },
+      { name: "Paper", icon: "https://paper.design/favicon.ico" },
+      { name: "Rayon", icon: "https://www.rayon.design/favicon.ico?e203994e09fc689a", tone: "invert" },
+    ],
+  },
+  {
+    name: "AI",
+    items: [
+      { name: "ChatGPT", icon: "https://api.iconify.design/simple-icons/openai.svg?color=%238c908d" },
+      { name: "Claude", icon: "https://cdn.simpleicons.org/claude/8c908d" },
+    ],
+  },
+  {
+    name: "Productivity",
+    items: [{ name: "Notion", icon: "https://cdn.simpleicons.org/notion/8c908d" }],
+  },
+  {
+    name: "Development",
+    items: [
+      { name: "Cursor", icon: "https://cdn.simpleicons.org/cursor/8c908d" },
+      { name: "GitHub", icon: "https://cdn.simpleicons.org/github/8c908d" },
+      { name: "Replit", icon: "https://cdn.simpleicons.org/replit/8c908d" },
+    ],
+  },
+];
+
+const selfTaughtLanguages = [
+  { name: "English", capabilities: "Read · Write · Speak" },
+  { name: "Tulu", capabilities: "Read · Write · Speak" },
+  { name: "Kannada", capabilities: "Read · Write · Speak" },
+  { name: "Hindi", capabilities: "Read · Write · Speak" },
+  { name: "Telugu", capabilities: "Speak" },
+];
+
+const learningLanguages = [
+  "Spanish",
+  "French",
+  "German",
+  "Indonesian",
+  "Japanese",
+];
+
+const programmingLanguages = [
+  { name: "HTML", icon: "https://cdn.simpleicons.org/html5/8c908d" },
+  { name: "CSS", icon: "https://cdn.simpleicons.org/css/8c908d" },
+  { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/8c908d" },
+  { name: "Python", icon: "https://cdn.simpleicons.org/python/8c908d" },
+  { name: "C", icon: "https://cdn.simpleicons.org/c/8c908d" },
+];
+
 export default function Home() {
   return (
     <div className="site-shell">
@@ -69,7 +124,7 @@ export default function Home() {
 
         <section aria-labelledby="current-title">
           <div className="section-heading">
-            <h2 id="current-title">Current work</h2>
+            <h2 id="current-title">Current roles</h2>
             <span>03 roles</span>
           </div>
           <div className="data-list">
@@ -134,6 +189,63 @@ export default function Home() {
                 <span className="muted">{credential.validUntil}</span>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section id="tools-technologies" aria-labelledby="tools-technologies-title">
+          <div className="section-heading">
+            <h2 id="tools-technologies-title">Tools &amp; technologies</h2>
+          </div>
+          <div className="capability-groups">
+            {toolGroups.map((group) => (
+              <div className="capability-group" key={group.name}>
+                <h3>{group.name}</h3>
+                <div className="capability-grid">
+                  {group.items.map((item) => (
+                    <div className="capability-item" key={item.name}>
+                      <span className="logo-slot"><img className={item.tone ? `logo-${item.tone}` : undefined} src={item.icon} alt="" width="24" height="24" /></span>
+                      <span>{item.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <div className="capability-group">
+              <h3>Programming</h3>
+              <div className="capability-grid">
+                {programmingLanguages.map((item) => (
+                  <div className="capability-item" key={item.name}>
+                    <span className="logo-slot"><img src={item.icon} alt="" width="24" height="24" /></span>
+                    <span>{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="languages" aria-labelledby="languages-title">
+          <div className="section-heading">
+            <h2 id="languages-title">Languages</h2>
+          </div>
+          <div className="language-groups">
+            <div className="language-group">
+              <h3>Everyday languages</h3>
+              <div className="language-rows">
+                {selfTaughtLanguages.map((language) => (
+                  <div className="language-row" key={language.name}>
+                    <strong>{language.name}</strong>
+                    <span>{language.capabilities}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="language-group">
+              <h3>Learning on Duolingo</h3>
+              <div className="learning-languages">
+                {learningLanguages.map((language) => <span key={language}>{language}</span>)}
+              </div>
+            </div>
           </div>
         </section>
 
