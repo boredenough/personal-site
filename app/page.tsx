@@ -176,6 +176,22 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="github-activity" aria-labelledby="github-activity-title">
+          <div className="section-heading">
+            <h2 id="github-activity-title">GitHub activity</h2>
+            <span>Last 12 months</span>
+          </div>
+          <a className="contribution-graph" href="https://github.com/boredenough" target="_blank" rel="noreferrer">
+            <img
+              src="https://ghchart.rshah.org/090a0a/boredenough"
+              alt="Pranav Shetty’s GitHub contribution graph for the last 12 months"
+              width="663"
+              height="104"
+            />
+            <span>View on GitHub ↗</span>
+          </a>
+        </section>
+
         <section id="certificates" aria-labelledby="certificates-title">
           <div className="section-heading">
             <h2 id="certificates-title">Certificates</h2>

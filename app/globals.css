@@ -72,6 +72,10 @@ summary::-webkit-details-marker { display: none; }
 details[open] .indicator { transform: rotate(45deg); }
 details ul { margin: 0; padding: 2px 0 24px 144px; border-bottom: 1px solid var(--line); color: var(--muted); }
 details li { margin: 8px 0; }
+.contribution-graph { display: block; padding: 28px 0 24px; border-bottom: 1px solid var(--line); }
+.contribution-graph img { display: block; width: 100%; max-width: 880px; height: auto; filter: invert(1); }
+.contribution-graph span { display: inline-block; margin-top: 18px; color: var(--muted); font-family: var(--font-geist-mono), monospace; font-size: 12px; }
+.contribution-graph:hover span { color: var(--signal); }
 .capability-groups { border-bottom: 1px solid var(--line); }
 .capability-group { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); }
 .capability-group:last-child { border-bottom: 0; }
