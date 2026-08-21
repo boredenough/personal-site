@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContributionGraph from "./contribution-graph";
 
 export const metadata: Metadata = {
   title: "Pranav Shetty",
@@ -181,15 +182,7 @@ export default function Home() {
             <h2 id="github-activity-title">GitHub activity</h2>
             <span>Last 12 months</span>
           </div>
-          <a className="contribution-graph" href="https://github.com/boredenough" target="_blank" rel="noreferrer">
-            <img
-              src="https://ghchart.rshah.org/090a0a/boredenough"
-              alt="Pranav Shetty’s GitHub contribution graph for the last 12 months"
-              width="663"
-              height="104"
-            />
-            <span>View on GitHub ↗</span>
-          </a>
+          <ContributionGraph />
         </section>
 
         <section id="certificates" aria-labelledby="certificates-title">
